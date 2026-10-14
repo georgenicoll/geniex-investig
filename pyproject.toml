@@ -1,0 +1,20 @@
+[project]
+name = "geniex_investig"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "geniex>=0.8.0",
+]
+
+[project.scripts]
+geniex_investig = "geniex_investig:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[[tool.mypy.overrides]]
+module = "geniex.*"
+ignore_missing_imports = true
